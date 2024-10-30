@@ -1,0 +1,21 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+    darkMode: false, // or 'media' or 'class'
+    theme: {
+      extend: {
+        colors: {
+            primary: '#FFB907',
+        },
+        fontFamily: {
+            archivo: ['Archivo', 'sans-serif'],
+            archivoBlack: ['ArchivoBlack', 'sans-serif'],
+        }
+      },
+    },
+    variants: {
+      extend: {},
+    },
+    plugins: [],
+  }
+
