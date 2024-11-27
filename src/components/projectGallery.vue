@@ -17,7 +17,7 @@ import projects from "@/assets/data/projects.json";
             {{ project.title }}
         </p>
         <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <p class="card-project text-center" :style="{ color: project.color2 }"> Click to see the project</p>
+            <p class="card-project text-center" :style="{ color: project.color2 }"> Cliquez pour voir le projet</p>
         </div>
     </div>
   </div>

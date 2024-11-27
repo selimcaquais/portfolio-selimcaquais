@@ -30,23 +30,24 @@ const handleImageIndexMinus = () =>{
 
       <div class="flex justify-end">
         <button @click="closeModal" class="cursor-none">
-          <CrossMarkIcon class="w-12 p-2 transition-transform duration-300 hover:rotate-180"/>
+          <CrossMarkIcon class="w-12 p-2 stroke-white transition-transform duration-300 hover:rotate-90"/>
         </button>
       </div>
 
-      <h2 class=" font-archivoBlack text-7xl pl-24">{{ (actualProject.title).toUpperCase() }}</h2>
+      <h2 class=" font-archivoBlack text-white text-7xl pl-24">{{ (actualProject.title).toUpperCase() }}</h2>
 
+      <p class="font-archivo text-white pt-12 w-2/3 pl-24">{{ actualProject.description }}</p>
+      
       <div class="flex justify-center items-center pt-12 gap-12">
-        <ChevronLeftIcon class="w-8 f-git transition-transform duration-200 hover:scale-125" @click="handleImageIndexMinus"/>
+        <ChevronLeftIcon class="w-8 f-git stroke-white transition-transform duration-200 hover:scale-125" @click="handleImageIndexMinus"/>
         <img loading="lazy" :src="actualProject.images[imageIndex]" class="w-[40em] h-[25em] object-cover select-none"/>
-        <ChevronLeftIcon class="transform rotate-180 w-8 h-fit  transition-transform duration-200 hover:scale-125" @click="handleImageIndexPlus"/>
+        <ChevronLeftIcon class="transform stroke-white rotate-180 w-8 h-fit  transition-transform duration-200 hover:scale-125" @click="handleImageIndexPlus"/>
       </div>
 
-      <p class="font-archivo text-center pt-12 w-full px-80">{{ actualProject.description }}</p>
 
-      <div class="flex flex-col items-center justify-center gap-3 pt-6">
+      <div class="flex flex-col items-center justify-center gap-2 pt-6">
         <a href="" v-if="actualProject.linkToTheGithub" class="linkedProject inline-block group cursor-none">
-        <div class="flex gap-2">
+        <div class="flex gap-2 p-2">
                 <p class="font-archivo">Github</p>
                 <GithubLogoIcon class="fill-primary block transition-all delay-[250ms] ease-out w-0 group-hover:w-6"/>
             </div>
@@ -54,7 +55,7 @@ const handleImageIndexMinus = () =>{
 
         <a href="" v-if="actualProject.linkToTheProject" class="linkedProject inline-block group cursor-none">
         <div class="flex gap-2">
-                <p class="font-archivo">Access to the project</p>
+                <p class="font-archivo">Accéder au projet</p>
                 <arrowLeftTopIcon class="stroke-primary block transition-all delay-[250ms] ease-out w-0 group-hover:w-4"/>
             </div>
         </a>
@@ -75,11 +76,11 @@ const handleImageIndexMinus = () =>{
   top: 4vh;
   left: 4vw;
 
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 
   padding:1em;
@@ -104,8 +105,8 @@ const handleImageIndexMinus = () =>{
   .linkedProject {
     background-image: linear-gradient(
       to left,
-      #000,
-      #000 50%,
+      #fff,
+      #fff 50%,
       #FFB907 50%
     );
     background-size: 200% 100%;

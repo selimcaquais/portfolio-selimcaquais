@@ -4,15 +4,16 @@ import arrowLeftTopIcon from './icons/arrowLeftTopIcon.vue';
 const links = [
     {title:'Github', links:'#'},
     {title:'Email', links:'#'},
+    {title:'Malt', links:'#'},
     {title:'Linkedin', links:'#'}];
 </script>
 
 <template>
-    <div class="flex flex-col items-end text-white gap-2 cursor-none">
-        <p>Contact me</p>
+    <div class="flex flex-col items-end text-white gap-1 cursor-none">
+        <p>Contactez moi</p>
         <hr class="h-px w-1/2">
         <a href="" v-for="link in links" v-bind:key="link.title" class="linked inline-block group cursor-none">
-        <div class="flex gap-2">
+        <div class="flex">
                 <p class="font-archivo">{{ link.title }} </p>
                 <arrowLeftTopIcon class="stroke-primary block transition-all delay-[250ms] ease-out w-0 group-hover:w-4"/>
             </div>

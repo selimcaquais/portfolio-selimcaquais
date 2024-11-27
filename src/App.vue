@@ -58,7 +58,7 @@ const closeModalProject = () => {
             <div class="title-header-wrapper ml-8 mt-8 mr">
               <div class="flex flex-col w-min text-nowrap">
                 <h1 class="text-primary font-archivoBlack text-8xl">SELIM CAQUAIS</h1>
-                <h3 class="font-archivo text-white mr-2 place-self-end">Front-end developer</h3>
+                <h3 class="font-archivo text-white mr-2 place-self-end">Front-end développeur</h3>
               </div>
             </div>
 
@@ -70,7 +70,6 @@ const closeModalProject = () => {
 
           <div class="w-[17%] h-full flex items-center justify-center pt-24">
             <div class="w-2/3">
-              <headshotPicture/>
             </div>
           </div>
 
