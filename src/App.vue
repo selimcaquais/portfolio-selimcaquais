@@ -2,7 +2,7 @@
 import backgroundIframe from './components/background/backgroundIframe.vue';
 import filterBackground from './components/background/filterBackground.vue';
 import descritpionHero from './components/descritpionHero.vue';
-import headshotPicture from './components/headshotPicture.vue';
+// import headshotPicture from './components/headshotPicture.vue';
 import contactMainPage from './components/contactMainPage.vue';
 import projectGallery from './components/projectGallery.vue';
 import "./assets/css/main.css";
