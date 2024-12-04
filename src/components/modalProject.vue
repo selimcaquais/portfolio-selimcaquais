@@ -1,15 +1,13 @@
 <script setup>
-import { ref } from 'vue';
-import ChevronLeftIcon from './icons/chevronLeftIcon.vue';
+import { onMounted } from 'vue';
 import CrossMarkIcon from './icons/crossMarkIcon.vue';
 import arrowLeftTopIcon from './icons/arrowLeftTopIcon.vue';
 import GithubLogoIcon from './icons/githubLogoIcon.vue';
 
 const props = defineProps({
   actualProject: { required: true },
+  isModalProjectOpen: {required:true},
 });
-
-const imageIndex = ref(0);
 
 const emit = defineEmits(['close']);
 
@@ -17,14 +15,77 @@ const closeModal = () => {
   emit('close');
 };
 
-const handleImageIndexPlus = () =>{
-  imageIndex.value = (imageIndex.value + 1) % props.actualProject.images.length;
-}
-const handleImageIndexMinus = () =>{
-  imageIndex.value = (imageIndex.value - 1 + props.actualProject.images.length) % props.actualProject.images.length;
-}
+onMounted (() => {
+  const carouselList = document.querySelector('.carousel__list');
+  const carouselItems = document.querySelectorAll('.carousel__item');
+  const elems = Array.from(carouselItems);
 
+let isThrottled = false;
+
+const handleScroll = (event) => {
+  if (isThrottled) return;
+  isThrottled = true;
+
+  setTimeout(() => {
+    isThrottled = false; 
+  }, 2200);
+
+  const direction = event.deltaX > 0 ? 1 : -1;
+
+  // Trouve le nouvel élément actif en fonction de la direction
+  const current = elems.find((elem) => elem.dataset.pos == 0);
+  const currentIndex = elems.indexOf(current);
+
+  const newActiveIndex = (currentIndex + direction + elems.length) % elems.length;
+
+  const newActive = elems[newActiveIndex];
+  update(newActive);
+};
+
+window.addEventListener('wheel', handleScroll);
+
+carouselList.addEventListener('click', function (event) {
+  var newActive = event.target;
+  var isItem = newActive.closest('.carousel__item');
+
+  if (!isItem || newActive.classList.contains('carousel__item_active')) {
+    return;
+  };
+  
+  update(newActive);
+});
+
+const update = function(newActive) {
+  const newActivePos = newActive.dataset.pos;
+
+  const current = elems.find((elem) => elem.dataset.pos == 0);
+  const prev = elems.find((elem) => elem.dataset.pos == -1);
+  const next = elems.find((elem) => elem.dataset.pos == 1);
+  const first = elems.find((elem) => elem.dataset.pos == -2);
+  const last = elems.find((elem) => elem.dataset.pos == 2);
+
+  current.classList.remove('carousel__item_active');
+  
+  [current, prev, next, first, last].forEach(item => {
+    var itemPos = item.dataset.pos;
+
+    item.dataset.pos = getPos(itemPos, newActivePos)
+  });
+};
+
+const getPos = function (current, active) {
+  const diff = current - active;
+
+  if (Math.abs(current - active) > 2) {
+    return -current
+  }
+
+  return diff;
+}
+});
+  
 </script>
+
 <template>
     <div class="modalProject">
 
@@ -34,37 +95,124 @@ const handleImageIndexMinus = () =>{
         </button>
       </div>
 
-      <h2 class=" font-archivoBlack text-white text-7xl pl-24">{{ (actualProject.title).toUpperCase() }}</h2>
+      <h2 class=" font-archivoBlack text-white text-7xl pl-24">{{ (props.actualProject.title).toUpperCase() }}</h2>
 
-      <p class="font-archivo text-white pt-12 w-2/3 pl-24">{{ actualProject.description }}</p>
+      <p class="font-archivo text-white pt-12 w-2/3 pl-24">{{ props.actualProject.description }}</p>
       
-      <div class="flex justify-center items-center pt-12 gap-12">
-        <ChevronLeftIcon class="w-8 f-git stroke-white transition-transform duration-200 hover:scale-125" @click="handleImageIndexMinus"/>
-        <img loading="lazy" :src="actualProject.images[imageIndex]" class="w-[40em] h-[25em] object-cover select-none"/>
-        <ChevronLeftIcon class="transform stroke-white rotate-180 w-8 h-fit  transition-transform duration-200 hover:scale-125" @click="handleImageIndexPlus"/>
+      <div class="flex justify-center items-center gap-12">
+          <ul class="carousel__list">
+            <li v-for="image in props.actualProject.images" 
+                v-bind:key="(props.actualProject.images).indexOf(image)+1" 
+                class="carousel__item" 
+                :data-pos="((props.actualProject.images).indexOf(image)+1) - 3">
+                <img class="pointer-events-none" :src="image" alt="">
+              </li>
+          </ul>
       </div>
 
-
       <div class="flex flex-col items-center justify-center gap-2 pt-6">
-        <a href="" v-if="actualProject.linkToTheGithub" class="linkedProject inline-block group cursor-none">
+        <a href="" v-if="props.actualProject.linkToTheGithub" class="linkedProject inline-block group cursor-none">
         <div class="flex gap-2 p-2">
                 <p class="font-archivo">Github</p>
                 <GithubLogoIcon class="fill-primary block transition-all delay-[250ms] ease-out w-0 group-hover:w-6"/>
             </div>
         </a>
 
-        <a href="" v-if="actualProject.linkToTheProject" class="linkedProject inline-block group cursor-none">
+        <a href="" v-if="props.actualProject.linkToTheProject" class="linkedProject inline-block group cursor-none">
         <div class="flex gap-2">
                 <p class="font-archivo">Accéder au projet</p>
                 <arrowLeftTopIcon class="stroke-primary block transition-all delay-[250ms] ease-out w-0 group-hover:w-4"/>
             </div>
         </a>
       </div>
+
     </div>
 </template>
 
 <style>
-
+.carousel__list {
+    display: flex;
+    list-style: none;
+    position: relative;
+    width: 100%;
+    height:25rem; 
+    justify-content: center;
+    perspective: 300px;
+}
+  
+.carousel__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0px;
+    width: 30rem;
+    height: 25rem;
+    position: absolute;
+    transition: all .3s ease-in;
+}
+.carousel__item:nth-child(1) {
+      background-image:url("image/1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+.carousel__item:nth-child(2) {
+      background-image:url("image/2.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+.carousel__item:nth-child(3) {
+      background-image:url("image/3.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+.carousel__item:nth-child(4) {
+      background-image:url("image/1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+.carousel__item:nth-child(5) {
+      background-image:url("image/2.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+.carousel__item[data-pos="0"] {
+      z-index: 5;
+    }
+    
+.carousel__item[data-pos="-1"],
+.carousel__item[data-pos="1"] {
+      opacity: 0.7;
+      filter: blur(1px) grayscale(10%);
+    }
+    
+.carousel__item[data-pos="-1"] {
+      transform: translateX(-40%) scale(.9);
+      z-index: 4;
+    }
+    
+.carousel__item[data-pos="1"] {
+      transform: translateX(40%) scale(.9);
+      z-index: 4;
+    }
+    
+.carousel__item[data-pos="-2"],
+.carousel__item[data-pos="2"] {
+      opacity: 0.4;
+      filter: blur(3px) grayscale(20%);
+    }
+    
+.carousel__item[data-pos="-2"] {
+      transform: translateX(-70%) scale(.8);
+      z-index: 3;
+    }
+    
+.carousel__item[data-pos="2"] {
+      transform: translateX(70%) scale(.8);
+      z-index: 3;
+    }
+    
 .modalProject{
   position: absolute;
   display: block;
@@ -79,8 +227,8 @@ const handleImageIndexMinus = () =>{
   background: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 
   padding:1em;
@@ -136,3 +284,6 @@ const handleImageIndexMinus = () =>{
   }
 </style>
 
+<script>
+
+</script>

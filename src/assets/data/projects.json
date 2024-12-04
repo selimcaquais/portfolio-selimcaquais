@@ -1,11 +1,11 @@
 [
     {
       "id": 1,
-      "title": "A travers vers",
+      "title": "A TRAVERS VERS",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
       "linkToTheProject" : "linkToTheProject",
       "linkToTheGithub" : "linkToTheGithub",
-      "imageButton": "https://nicolasboulandetphoto.com/wp-content/uploads/2020/08/DSC0801-Modifier-2-Modifier.jpg",
+      "imageButton": "./images/projects/AtraversVersCard.jpg",
       "images":["https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg", "https://media.istockphoto.com/id/517188688/fr/photo/paysage-de-montagne.jpg?s=612x612&w=0&k=20&c=pB4ewEznPPXu63-wemLp-I9O6zZmKWbsFKpyNBiMXiU=", "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80"]
     },
     {
@@ -14,27 +14,29 @@
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
       "linkToTheProject" : "linkToTheProject",
       "imageButton": "https://images.squarespace-cdn.com/content/v1/528b9077e4b076ee0b892f2f/1524870498881-D86IVF2H7JKGK3DVKXYO/Chow-Chow-puppy-photography-Montreal.jpg",
-      "images":["https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg", "https://media.istockphoto.com/id/517188688/fr/photo/paysage-de-montagne.jpg?s=612x612&w=0&k=20&c=pB4ewEznPPXu63-wemLp-I9O6zZmKWbsFKpyNBiMXiU=", "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80"]
+      "images":["https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg", "https://media.istockphoto.com/id/517188688/fr/photo/paysage-de-montagne.jpg?s=612x612&w=0&k=20&c=pB4ewEznPPXu63-wemLp-I9O6zZmKWbsFKpyNBiMXiU=", "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80"],
+      "color":"black",
+      "color2":"white"
     },
     {
         "id": 3,
-        "title": "On piste",
+        "title": "ON PISTE",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
         "linkToTheProject" : "linkToTheProject",
         "linkToTheGithub" : "linkToTheGithub",
-        "imageButton": "https://www.voyageurserein.com/wp-content/uploads/2024/02/paris-numero-un-parmi-les-plus-belles-villes-du-monde-en-2024.jpg",
+        "imageButton": "../public/images/projects/OnpisteCard.jpg",
         "images":["https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg", "https://media.istockphoto.com/id/517188688/fr/photo/paysage-de-montagne.jpg?s=612x612&w=0&k=20&c=pB4ewEznPPXu63-wemLp-I9O6zZmKWbsFKpyNBiMXiU=", "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80"],
         "color":"black",
-        "color2":"white"
+        "color2":"black"
     },
     {
         "id": 4,
-        "title": "MidNightRun",
+        "title": "Midnight Run",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
         "linkToTheProject" : "linkToTheProject",
         "linkToTheGithub" : "linkToTheGithub",
-        "imageButton": "https://static.euronews.com/articles/522703/1024x538_522703.jpg",
-        "images":["https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg", "https://media.istockphoto.com/id/517188688/fr/photo/paysage-de-montagne.jpg?s=612x612&w=0&k=20&c=pB4ewEznPPXu63-wemLp-I9O6zZmKWbsFKpyNBiMXiU=", "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80"]
+        "imageButton": "./images/projects/MidnightRun.jpg",
+        "images":["https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg", "https://media.istockphoto.com/id/517188688/fr/photo/paysage-de-montagne.jpg?s=612x612&w=0&k=20&c=pB4ewEznPPXu63-wemLp-I9O6zZmKWbsFKpyNBiMXiU=", "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80","./images/projects/AtraversVersCard.jpg","./images/projects/MidnightRun.jpg"]
     },
     {
         "id": 5,

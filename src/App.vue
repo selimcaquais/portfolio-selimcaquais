@@ -45,6 +45,7 @@ const closeModalProject = () => {
    <modalProject 
     v-if="isModalProjectOpen === true" 
     :actualProject="actualProject"
+    :isModalProjectOpen="isModalProjectOpen"
     @close="closeModalProject"/>
 
    <!-- Main Page -->
