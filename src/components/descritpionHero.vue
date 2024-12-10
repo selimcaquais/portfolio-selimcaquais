@@ -8,11 +8,9 @@ import CalendarIcon from './icons/calendarIcon.vue';
     <div class="text-white font-archivo">
         <h3 class="font-archivoBlack pb-4">Qui suis-je ?</h3>
         <p class="pb-4">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting, 
-            remaining essentially unchanged.
+            Développeur front-end passionné, je combine un esprit créatif soutenu par une attention aux détails pour créer des sites web et applications mobile modernes et unique. 
+            Diplômé d’un Bachelor en Conception et Développement d’Applications, j’ai acquis une solide expertise en travaillant sur des projets variés.
+            <br>Prêt à donner vie à votre projet ?
         </p>
         <a href="#" class="inline-block cursor-none">
             <button class="border rounded-full cursor-none p-2 flex gap-1 group items-center transition-all duration-300 hover:pr-4 hover:text-primary hover:border-primary">

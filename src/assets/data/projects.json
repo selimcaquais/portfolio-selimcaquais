@@ -2,11 +2,11 @@
     {
       "id": 1,
       "title": "A TRAVERS VERS",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-      "linkToTheProject" : "linkToTheProject",
-      "linkToTheGithub" : "linkToTheGithub",
-      "imageButton": "./images/projects/AtraversVersCard.jpg",
-      "images":["https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg", "https://media.istockphoto.com/id/517188688/fr/photo/paysage-de-montagne.jpg?s=612x612&w=0&k=20&c=pB4ewEznPPXu63-wemLp-I9O6zZmKWbsFKpyNBiMXiU=", "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80"]
+      "description": "'A travers vers' relève le défi de l'interactivité dans la littérature. Reconnaissant que les livres traditionnels limitent l'interaction avec le lecteur à une lecture linéaire, il propose une expérience unique. À partir d'un seul vers, le lecteur choisit entre deux vers, créant ainsi son propre chemin et un poème personnalisé.",
+      "linkToTheProject" : "https://selimcaquais.github.io/ATraversVers/",
+      "linkToTheGithub" : "https://github.com/selimcaquais/ATraversVers",
+      "imageButton": "./images/projects/AtraversVers/AtraversVersCard.webp",
+      "images":["./images/projects/AtraversVers/AtraversVersP5.webp", "./images/projects/AtraversVers/AtraversVersP4.webp", "./images/projects/AtraversVers/AtraversVersP1.webp","./images/projects/AtraversVers/AtraversVersP2.webp","./images/projects/AtraversVers/AtraversVersP3.webp"]
     },
     {
       "id": 2,
@@ -32,11 +32,11 @@
     {
         "id": 4,
         "title": "Midnight Run",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-        "linkToTheProject" : "linkToTheProject",
-        "linkToTheGithub" : "linkToTheGithub",
-        "imageButton": "./images/projects/MidnightRun.jpg",
-        "images":["https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg", "https://media.istockphoto.com/id/517188688/fr/photo/paysage-de-montagne.jpg?s=612x612&w=0&k=20&c=pB4ewEznPPXu63-wemLp-I9O6zZmKWbsFKpyNBiMXiU=", "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80","./images/projects/AtraversVersCard.jpg","./images/projects/MidnightRun.jpg"]
+        "description": "Midnight Run est un petit jeu 2D que j'ai développé pendant ma première année en développement web. Il s'agit d'un escape game sur le thème d'une soirée d'anniversaire. Le jeu comporte cinq pièces dans lesquelles il faut interagir avec les bons personnages pour s'échapper et retrouver un ami. Réalisé en JavaScript sans framework, ce projet m'a permis d'apprendre la physique des collisions dans un jeu 2D. Tout le design a été réalisé sur Tiled grâce à des assets créés par LimeZu (disponibles sur itch.io).",
+        "linkToTheProject" : "https://selimcaquais.github.io/MidnightRun/",
+        "linkToTheGithub" : "https://github.com/selimcaquais/MidnightRun",
+        "imageButton": "./images/projects/MidnightRun/MidnightRunCard.webp",
+        "images":["./images/projects/MidnightRun/MidnightRunP4.webp", "./images/projects/MidnightRun/MidnightRunP2.webp","./images/projects/MidnightRun/MidnightRunCard.webp", "./images/projects/MidnightRun/MidnightRunP3.webp","./images/projects/MidnightRun/MidnightRunP5.webp"]
     },
     {
         "id": 5,

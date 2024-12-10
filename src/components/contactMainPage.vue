@@ -2,9 +2,9 @@
 import arrowLeftTopIcon from './icons/arrowLeftTopIcon.vue';
 
 const links = [
-    {title:'Github', links:'#'},
+    {title:'Github', links:'https://github.com/selimcaquais'},
     {title:'Email', links:'#'},
-    {title:'Malt', links:'#'},
+    {title:'Malt', links:'https://www.malt.fr/profile/selimcaquais?overview'},
     {title:'Linkedin', links:'#'}];
 </script>
 

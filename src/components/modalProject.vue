@@ -105,7 +105,7 @@ const getPos = function (current, active) {
                 v-bind:key="(props.actualProject.images).indexOf(image)+1" 
                 class="carousel__item" 
                 :data-pos="((props.actualProject.images).indexOf(image)+1) - 3">
-                <img class="pointer-events-none" :src="image" alt="">
+                <img class="pointer-events-none h-full" :src="image" alt="">
               </li>
           </ul>
       </div>
@@ -113,14 +113,14 @@ const getPos = function (current, active) {
       <div class="flex flex-col items-center justify-center gap-2 pt-6">
         <a href="" v-if="props.actualProject.linkToTheGithub" class="linkedProject inline-block group cursor-none">
         <div class="flex gap-2 p-2">
-                <p class="font-archivo">Github</p>
+                <a class="font-archivo cursor-none" :href="props.actualProject.linkToTheGithub" target="_blank">Github</a>
                 <GithubLogoIcon class="fill-primary block transition-all delay-[250ms] ease-out w-0 group-hover:w-6"/>
             </div>
         </a>
 
         <a href="" v-if="props.actualProject.linkToTheProject" class="linkedProject inline-block group cursor-none">
         <div class="flex gap-2">
-                <p class="font-archivo">Accéder au projet</p>
+                <a class="font-archivo cursor-none" :href="props.actualProject.linkToTheProject" target="_blank">Accéder au projet</a>
                 <arrowLeftTopIcon class="stroke-primary block transition-all delay-[250ms] ease-out w-0 group-hover:w-4"/>
             </div>
         </a>
@@ -137,6 +137,7 @@ const getPos = function (current, active) {
     width: 100%;
     height:25rem; 
     justify-content: center;
+    align-items: center;
     perspective: 300px;
 }
   
@@ -144,10 +145,9 @@ const getPos = function (current, active) {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    font-size: 0px;
     width: 30rem;
-    height: 25rem;
+    height: 20rem;
+    background-color: black;
     position: absolute;
     transition: all .3s ease-in;
 }
