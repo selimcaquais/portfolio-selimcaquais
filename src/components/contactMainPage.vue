@@ -1,20 +1,24 @@
 <script setup>
 import arrowLeftTopIcon from './icons/arrowLeftTopIcon.vue';
 
-const links = [
-    {title:'Github', links:'https://github.com/selimcaquais'},
-    {title:'Email', links:'#'},
-    {title:'Malt', links:'https://www.malt.fr/profile/selimcaquais?overview'},
-    {title:'Linkedin', links:'#'}];
+const contacts = [
+    {title:'Github', link:'https://github.com/selimcaquais'},
+    {title:'Email', link:'mailto:caquais.selim@protonmail.com'},
+    {title:'Malt', link:'https://www.malt.fr/profile/selimcaquais?overview'},
+    {title:'Linkedin', link:'https://www.linkedin.com/in/s%C3%A9lim-caquais-a23a15236/'}];
 </script>
 
 <template>
     <div class="flex flex-col items-end text-white gap-1 cursor-none">
         <p>Contactez moi</p>
         <hr class="h-px w-1/2">
-        <a href="" v-for="link in links" v-bind:key="link.title" class="linked inline-block group cursor-none">
+        <a v-for="contact in contacts" 
+           v-bind:key="contact.title" 
+           class="linked inline-block group cursor-none"
+           :href="contact.link"
+           target="_blank">
         <div class="flex">
-                <p class="font-archivo">{{ link.title }} </p>
+                <p class="font-archivo">{{ contact.title }} </p>
                 <arrowLeftTopIcon class="stroke-primary block transition-all delay-[250ms] ease-out w-0 group-hover:w-4"/>
             </div>
         </a>

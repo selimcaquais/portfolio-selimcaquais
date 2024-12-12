@@ -147,7 +147,7 @@ const getPos = function (current, active) {
     justify-content: center;
     width: 30rem;
     height: 20rem;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     transition: all .3s ease-in;
 }

@@ -12,7 +12,7 @@ import CalendarIcon from './icons/calendarIcon.vue';
             Diplômé d’un Bachelor en Conception et Développement d’Applications, j’ai acquis une solide expertise en travaillant sur des projets variés.
             <br>Prêt à donner vie à votre projet ?
         </p>
-        <a href="#" class="inline-block cursor-none">
+        <a href="https://www.malt.fr/profile/selimcaquais?overview" target="_blank" class="inline-block cursor-none">
             <button class="border rounded-full cursor-none p-2 flex gap-1 group items-center transition-all duration-300 hover:pr-4 hover:text-primary hover:border-primary">
                 Prendre rendez-vous
                 <CalendarIcon class="block transition-all duration-300 ease-out w-0 h-6 group-hover:w-6 group-hover:ml-2"/>

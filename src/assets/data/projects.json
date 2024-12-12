@@ -11,32 +11,30 @@
     {
       "id": 2,
       "title": "Grind.",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-      "linkToTheProject" : "linkToTheProject",
-      "imageButton": "https://images.squarespace-cdn.com/content/v1/528b9077e4b076ee0b892f2f/1524870498881-D86IVF2H7JKGK3DVKXYO/Chow-Chow-puppy-photography-Montreal.jpg",
-      "images":["https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg", "https://media.istockphoto.com/id/517188688/fr/photo/paysage-de-montagne.jpg?s=612x612&w=0&k=20&c=pB4ewEznPPXu63-wemLp-I9O6zZmKWbsFKpyNBiMXiU=", "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80"],
-      "color":"black",
-      "color2":"white"
+      "description": "Grind est une application conçue pour vous aider à rester organisé et motivé au quotidien. Créez vos objectifs journaliers, recevez des rappels pour ne rien manquer, et suivez vos progrès grâce à un système innovant de streaks et des statistiques détaillées. Release dans les prochains mois.",
+      "linkToTheGithub":"https://github.com/selimcaquais/grind_api",
+      "imageButton": "./images/projects/Grind/GrindCard.webp",
+      "images":["./images/projects/Grind/GrindP3.webp", "./images/projects/Grind/GrindP4.webp","./images/projects/Grind/GrindP1.webp", "./images/projects/Grind/GrindP2.webp","./images/projects/Grind/GrindP5.webp"]
     },
     {
-        "id": 3,
+      "id": 3,
+      "title": "Midnight Run",
+      "description": "Midnight Run est un petit jeu 2D que j'ai développé pendant ma première année en développement web. Il s'agit d'un escape game sur le thème d'une soirée d'anniversaire. Le jeu comporte cinq pièces dans lesquelles il faut interagir avec les bons personnages pour s'échapper et retrouver un ami. Réalisé en JavaScript sans framework, ce projet m'a permis d'apprendre la physique des collisions dans un jeu 2D. Tout le design a été réalisé sur Tiled grâce à des assets créés par LimeZu (disponibles sur itch.io).",
+      "linkToTheProject" : "https://selimcaquais.github.io/MidnightRun/",
+      "linkToTheGithub" : "https://github.com/selimcaquais/MidnightRun",
+      "imageButton": "./images/projects/MidnightRun/MidnightRunCard.webp",
+      "images":["./images/projects/MidnightRun/MidnightRunP4.webp", "./images/projects/MidnightRun/MidnightRunP3.webp","./images/projects/MidnightRun/MidnightRunCard.webp", "./images/projects/MidnightRun/MidnightRunP2.webp","./images/projects/MidnightRun/MidnightRunP5.webp"]
+    },
+    {
+        "id": 4,
         "title": "ON PISTE",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
         "linkToTheProject" : "linkToTheProject",
         "linkToTheGithub" : "linkToTheGithub",
-        "imageButton": "../public/images/projects/OnpisteCard.jpg",
+        "imageButton": "./images/projects/OnPiste/OnPisteCard.webp",
         "images":["https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg", "https://media.istockphoto.com/id/517188688/fr/photo/paysage-de-montagne.jpg?s=612x612&w=0&k=20&c=pB4ewEznPPXu63-wemLp-I9O6zZmKWbsFKpyNBiMXiU=", "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80"],
         "color":"black",
         "color2":"black"
-    },
-    {
-        "id": 4,
-        "title": "Midnight Run",
-        "description": "Midnight Run est un petit jeu 2D que j'ai développé pendant ma première année en développement web. Il s'agit d'un escape game sur le thème d'une soirée d'anniversaire. Le jeu comporte cinq pièces dans lesquelles il faut interagir avec les bons personnages pour s'échapper et retrouver un ami. Réalisé en JavaScript sans framework, ce projet m'a permis d'apprendre la physique des collisions dans un jeu 2D. Tout le design a été réalisé sur Tiled grâce à des assets créés par LimeZu (disponibles sur itch.io).",
-        "linkToTheProject" : "https://selimcaquais.github.io/MidnightRun/",
-        "linkToTheGithub" : "https://github.com/selimcaquais/MidnightRun",
-        "imageButton": "./images/projects/MidnightRun/MidnightRunCard.webp",
-        "images":["./images/projects/MidnightRun/MidnightRunP4.webp", "./images/projects/MidnightRun/MidnightRunP2.webp","./images/projects/MidnightRun/MidnightRunCard.webp", "./images/projects/MidnightRun/MidnightRunP3.webp","./images/projects/MidnightRun/MidnightRunP5.webp"]
     },
     {
         "id": 5,
